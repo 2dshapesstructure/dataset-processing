@@ -32,7 +32,7 @@ function [clust_maj,annot_clust,ind_annot_clust] = spectralClustering(shape_anno
             annot_clust{ind_aux} = shape_annot(clust==ind_clust)
             ind_annot_clust{ind_aux} = find(clust==ind_clust);
             % Compute the majority of the annotations from this cluster
-            clust_maj{ind_aux} = computeMajority(annot_clust{ind_clust});
+            clust_maj{ind_aux} = computeMajority(annot_clust{ind_aux});
             
             ind_aux = ind_aux + 1;
         end
