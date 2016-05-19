@@ -29,7 +29,7 @@ function [clust_maj,annot_clust,ind_annot_clust] = spectralClustering(shape_anno
         % Only keep the clusters that have at least 3 annotations
         if (length(find(clust==ind_clust)) > 2)
             % For each cluster, get the corresponding annotations
-            annot_clust{ind_aux} = shape_annot(clust==ind_clust)
+            annot_clust{ind_aux} = shape_annot(clust==ind_clust);
             ind_annot_clust{ind_aux} = find(clust==ind_clust);
             % Compute the majority of the annotations from this cluster
             clust_maj{ind_aux} = computeMajority(annot_clust{ind_aux});
