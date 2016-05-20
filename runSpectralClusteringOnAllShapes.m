@@ -25,7 +25,7 @@ score_threshold = scores_sorted(round(20*length(scores_sorted)/100));
 
 
 % Browse each shape
-for ind_shape=572:length(shape)
+for ind_shape=1:length(shape)
     disp(['Shape #' int2str(ind_shape)])
     
     % Read JSON 

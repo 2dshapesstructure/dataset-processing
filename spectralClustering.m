@@ -75,10 +75,13 @@ function VRC = computeCalinskiHarabasz(annotations,idx,areas_tri)
         end
             
     end
-    
+   
+    VRC = SSb/SSw;
+
+    % Using this criteria changes the results and usually provides less
+    % clusters (one or two)
 %     VRC = SSb*(N-nbClust)/(SSw * (nbClust));
-%    VRC = SSb*(N-nbClust)/(SSw * (nbClust-1));
-   VRC = SSb/SSw;
+   
 end
 
 % Implements the spectral clustering described in 
